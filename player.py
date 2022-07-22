@@ -16,10 +16,10 @@ class Player(Entity):
         mouse.locked = True
         self.mouse_sensitivity = Vec2(40, 40)
 
-        self.gravity = 0.8
+        self.gravity = 1
         self.grounded = False
         self.jump_height = 1
-        self.jump_up_duration = .5
+        self.jump_up_duration = .10
         self.fall_after = .35 # will interrupt jump up
         self.jumping = False
         self.air_time = 0
@@ -87,6 +87,8 @@ class Player(Entity):
     def input(self, key):
         if key == 'space':
             self.jump()
+        if key == 'f4':
+            quit()
 
     def jump(self):
         if not self.grounded:
