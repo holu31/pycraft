@@ -19,7 +19,7 @@ class Player(Entity):
         self.gravity = 1
         self.grounded = False
         self.jump_height = 1
-        self.jump_up_duration = .10
+        self.jump_up_duration = .20
         self.fall_after = .35 # will interrupt jump up
         self.jumping = False
         self.air_time = 0

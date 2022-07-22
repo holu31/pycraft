@@ -15,13 +15,12 @@ if SHADERS:
 sky = Sky(texture='textures/sky0')
 window.fullscreen = FULLSCREEN
 window.size = (WIDTH,HEIGHT)
-window.fps_counter.enabled = True
+window.fps_counter.enabled = False
 window.title = 'RuMine'
 window.exit_button.visible = False
-chanks = 2
 
-for x in range(16 * 2):
-    for z in range(16 * 2):
+for x in range(16 * CHANKS):
+    for z in range(16 * CHANKS):
         blocks.append(Block((x, 0, z)))
 
 player = Player()
