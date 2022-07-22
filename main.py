@@ -1,11 +1,13 @@
 from ursina import *
 from player import Player
 from block import Block
+from sky import Sky
 from settings import *
 
 blocks = []
 
 app = Ursina()
+sky = Sky(texture='sky0')
 window.fullscreen = FULLSCREEN
 window.size = (WIDTH,HEIGHT)
 window.fps_counter.enabled = False
